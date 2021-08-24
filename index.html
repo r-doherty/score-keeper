@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<section>
+			<img src="/media/ping-pong-hero.jpg" alt="picture of two ping pong paddles set on a table." />
+			<h1>Score Keeper</h1>
+			<h2>
+				<span id="playerOneScore">0</span>
+				<span> to </span>
+				<span id="playerTwoScore">0</span>
+			</h2>
+			<p>Use the buttons to below to keep score.</p>
+			<label for="scoreSelector">Playing to:</label>
+			<select name="scoreSelector" id="scoreSelector">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+			</select>
+			<section>
+				<button id="playerOneButton">+1 Player One</button>
+				<button id="playerTwoButton">+1 Player Two</button>
+				<button id="resetButton">Reset</button>
+			</section>
+		</section>
+		<script src="app.js"></script>
+	</body>
+</html>
