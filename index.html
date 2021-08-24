@@ -5,32 +5,61 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
 	</head>
 	<body>
-		<section>
-			<img src="/media/ping-pong-hero.jpg" alt="picture of two ping pong paddles set on a table." />
-			<h1>Score Keeper</h1>
-			<h2>
-				<span id="playerOneScore">0</span>
-				<span> to </span>
-				<span id="playerTwoScore">0</span>
-			</h2>
-			<p>Use the buttons to below to keep score.</p>
-			<label for="scoreSelector">Playing to:</label>
-			<select name="scoreSelector" id="scoreSelector">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-				<option value="6">6</option>
-				<option value="7">7</option>
-			</select>
-			<section>
-				<button id="playerOneButton">+1 Player One</button>
-				<button id="playerTwoButton">+1 Player Two</button>
-				<button id="resetButton">Reset</button>
-			</section>
+		<section class="section">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-half is-offset-one-quarter">
+						<div class="card">
+							<div class="card-image">
+								<figure class="image is-2by-1">
+									<img
+										src="https://github.com/r-doherty/score-keeper/blob/main/media/ping-pong-hero.jpg?raw=true"
+										alt="picture of two ping pong paddles set on a table."
+									/>
+								</figure>
+							</div>
+							<header class="card-header">
+								<p class="card-header-title">Score Keeper</p>
+								<button class="card-header-icon" aria-label="more options">
+									<span class="icon">
+										<i class="fas fa-angle-down" aria-hidden="true"></i>
+									</span>
+								</button>
+							</header>
+							<div class="card-content">
+								<div class="content">
+									<h1 class="title is-1">
+										<span id="playerOneScore">0</span>
+										<span> to </span>
+										<span id="playerTwoScore">0</span>
+									</h1>
+									<p class="subtitle">Use the buttons below to keep score</p>
+									<label for="scoreSelector" class="label is-large is-inline">Playing to:</label>
+									<div class="select is-rounded">
+										<select name="scoreSelector" id="scoreSelector">
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<footer class="card-footer">
+								<button id="playerOneButton" class="is-primary button card-footer-item is-medium">+1 Player One</button>
+								<button id="playerTwoButton" class="is-info button card-footer-item is-medium">+1 Player Two</button>
+								<button id="resetButton" class="is-danger button card-footer-item is-medium">Reset</button>
+							</footer>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 		<script src="app.js"></script>
 	</body>
