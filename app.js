@@ -13,32 +13,32 @@ const playerTwo = {
 // Misc. elements for the button to reset the score, as well
 // as the selection field to choose a score to play to.
 const resetButton = document.querySelector(`#resetButton`);
-const scoreSelector = document.querySelector(`#scoreselector`);
+const winningScoreSelector = document.querySelector(`#scoreSelector`);
 let winningScore = 5;
 let isGameOver = false;
 
-playerOne.button.addEventListener("click", () => {
+playerOne.button.addEventListener("click", function () {
 	updateScores(playerOne, playerTwo);
 });
 
-playerTwo.button.addEventListener("click", () => {
+playerTwo.button.addEventListener("click", function () {
 	updateScores(playerTwo, playerOne);
 });
 
 resetButton.addEventListener("click", reset);
 
-scoreSelector.addEventListener("change", function () {
+winningScoreSelector.addEventListener("change", function () {
 	winningScore = parseInt(this.value);
 	reset();
 });
 
 function reset() {
 	isGameOver = false;
-	for (let player of [playerOne, playerTwo]) {
-		player.score = 0;
-		player.display.textContent = 0;
-		player.display.classList.remove(`has-text-success`, `has-text-danger`);
-		player.button.disabled = false;
+	for (let p of [playerOne, playerTwo]) {
+		p.score = 0;
+		p.display.textContent = 0;
+		p.display.classList.remove(`has-text-success`, `has-text-danger`);
+		p.button.disabled = false;
 	}
 }
 
